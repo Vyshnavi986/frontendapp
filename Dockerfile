@@ -11,9 +11,8 @@ RUN npm install -g live-server
 # Copy all project files
 COPY . .
 
-# Expose port 8081
-EXPOSE 8081
+# Expose port 3000 (matches host mapping)
+EXPOSE 3000
 
 # Run live-server on 0.0.0.0 so it's accessible outside container
-CMD ["live-server", "--port=8080", "--host=0.0.0.0", "."]
-
+CMD ["live-server", "--port=3000", "--host=0.0.0.0", "."]
